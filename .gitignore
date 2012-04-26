@@ -8,3 +8,9 @@
 # target folder #
 target/*
 
+# eclipse project files  #
+.classpath
+.project
+.settings/*
+
+
