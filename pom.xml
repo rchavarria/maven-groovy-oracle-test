@@ -6,13 +6,13 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.soebes.groovy</groupId>
-  <artifactId>first-groovy</artifactId>
+  <groupId>com.rchavarria.groovy</groupId>
+  <artifactId>maven-groovy-oracle-test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
-  <name>Test Groovy Scripting</name>
+  <name>Test Groovy to access to an Oracle database</name>
 
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -20,6 +20,23 @@
   </properties>
 
   <dependencies>
+	<dependency>
+		<!--
+			Installed with the command:
+ 		
+ 				mvn install:install-file \ 
+ 					-DgroupId=com.oracle \ 
+ 					-DartifactId=ojdbc5 \
+ 					-Dversion=10.2.0.3.0 \
+ 					-Dpackaging=jar \
+ 					-Dfile=ojdbc5.jar \
+ 					-DgeneratePom=true 
+ 		-->
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc5</artifactId>
+		<version>10.2.0.3.0</version>
+	</dependency>
+  
     <dependency>
       <groupId>org.codehaus.gmaven.runtime</groupId>
       <artifactId>gmaven-runtime-1.8</artifactId>
